@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BriefcaseIcon } from "@heroicons/react/outline";
 import AOS from 'aos';
 import Testimonials from "@/components/testimonial";
+import 'aos/dist/aos.css';
 
 type TeamMember = {
   picture: { large: string; };
@@ -51,6 +52,7 @@ const HeroHalf = memo(function HeroHalf({ title, image }: { title: string; image
     <div
       className="w-full md:w-1/2 h-[60vh] md:min-h-screen relative bg-cover bg-center group"
       style={{ backgroundImage: `url(${image})` }}
+      data-aos="fade-up" // Add AOS animation to this section
     >
       <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 mt-0">
@@ -71,8 +73,6 @@ const ServiceCard = memo(function ServiceCard({ title, description, index }: { t
     </div>
   );
 });
-
-
 
 export default function HomePage() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
