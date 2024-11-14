@@ -74,53 +74,26 @@ const HeroHalf = memo(function HeroHalf({ title, image }: { title: string; image
       <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 mt-0">
         <div className="transform -translate-y-1/4 md:translate-y-0">
-          <h2 
-            className="text-white text-base sm:text-lg font-bold mb-2" 
-            data-aos="fade-down"
-          >
-            WE ARE
-          </h2>
-          <h1 
-            className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-widest transition-all duration-300 group-hover:text-[#2Fa4F9] group-hover:scale-110"
-            data-aos="fade-up"
-          >
-            {title}
-          </h1>
+          <h2 className="text-white text-base sm:text-lg font-bold mb-2" data-aos="fade-down">WE ARE</h2>
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-widest transition-all duration-300 group-hover:text-[#2Fa4F9] group-hover:scale-110" data-aos="fade-up">{title}</h1>
         </div>
       </div>
     </div>
   );
 });
 
-const ServiceCard = memo(function ServiceCard({ title, description, index }: { 
-  title: string; 
-  description: string; 
-  index: number; 
-}) {
+const ServiceCard = memo(function ServiceCard({ title, description, index }: { title: string; description: string; index: number; }) {
   return (
-    <div 
-      className="card bg-white/30 backdrop-blur-sm shadow-lg rounded-lg p-4 sm:p-6 hover:bg-[#2FA4F9] transition-all duration-300 hover:-translate-y-1"
-      data-aos="fade-up"
-      data-aos-delay={index * 100}
-    >
+    <div className="card bg-white/30 backdrop-blur-sm shadow-lg rounded-lg p-4 sm:p-6 hover:bg-[#2FA4F9] transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay={index * 100}>
       <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-3">{title}</h3>
       <p className="text-white text-sm sm:text-base">{description}</p>
     </div>
   );
 });
 
-const TestimonialCard = memo(function TestimonialCard({ text, author, role, index }: { 
-  text: string; 
-  author: string; 
-  role: string; 
-  index: number; 
-}) {
+const TestimonialCard = memo(function TestimonialCard({ text, author, role, index }: { text: string; author: string; role: string; index: number; }) {
   return (
-    <div 
-      className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg"
-      data-aos="fade-up"
-      data-aos-delay={index * 100}
-    >
+    <div className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay={index * 100}>
       <p className="text-base sm:text-lg italic">&quot;{text}&quot;</p>
       <p className="mt-4 text-right font-semibold">- {author}, {role}</p>
     </div>
@@ -161,10 +134,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section className="flex flex-col lg:flex-row items-center bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-24">
-        <div
-          className="lg:w-1/2 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 mb-8 lg:mb-0"
-          data-aos="fade-right"
-        >
+        <div className="lg:w-1/2 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 mb-8 lg:mb-0" data-aos="fade-right">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 flex items-center group">
             <BriefcaseIcon className="h-8 w-8 text-[#2FA4F9] mr-2 group-hover:text-[#0E80C2] transition-colors duration-300" />
             About Us
@@ -172,17 +142,11 @@ export default function HomePage() {
           <p className="text-base sm:text-lg text-gray-600 mb-4 leading-relaxed">
             With over a decade of experience in the cybersecurity industry, 1Sol was founded with a mission to protect companies of all sizes from emerging digital threats.
           </p>
-          <Link 
-            href="/about"
-            className="mt-4 inline-block bg-[#2FA4F9] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#0E80C2] transition-colors duration-300"
-          >
+          <Link href="/about" className="mt-4 inline-block bg-[#2FA4F9] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#0E80C2] transition-colors duration-300">
             Learn More
           </Link>
         </div>
-        <div 
-          className="lg:w-1/2 h-full flex items-center justify-center"
-          data-aos="fade-left"
-        >
+        <div className="lg:w-1/2 h-full flex items-center justify-center" data-aos="fade-left">
           <Image
             src="/img/1sol.png"
             alt="About Us"
@@ -197,19 +161,11 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-24">
-        <div
-          className="absolute inset-0 bg-fixed bg-cover bg-center"
-          style={{ backgroundImage: `url(${HERO_IMAGES.services})` }}
-        />
+        <div className="absolute inset-0 bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${HERO_IMAGES.services})` }} />
         <div className="absolute inset-0 bg-black/70" />
         <div className="container mx-auto relative z-10">
-          <h2 
-            className="text-center text-3xl sm:text-4xl font-bold text-white mb-10"
-            data-aos="fade-up"
-          >
-            Our Services
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+          <h2 className="text-center text-3xl sm:text-4xl font-bold text-white mb-10" data-aos="fade-up">Our Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 mb-10">
             {SERVICES.map((service, index) => (
               <ServiceCard
                 key={service.id}
@@ -219,44 +175,36 @@ export default function HomePage() {
               />
             ))}
           </div>
+          <div className="flex justify-center" data-aos="fade-up">
+            <Link href="/portfolio" className="inline-block bg-[#2FA4F9] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#0E80C2] transition-colors duration-300">
+              Explore All Services
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Team Section */}
       <section className="flex flex-col lg:flex-row items-center bg-black text-white py-16 lg:px-24 px-6">
-        <div 
-          className="text-center lg:text-left lg:w-1/2 px-6 mb-6 lg:mb-0"
-          data-aos="fade-right"
-        >
+        <div className="text-center lg:text-left lg:w-1/2 px-6 mb-6 lg:mb-0" data-aos="fade-right">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Your Trusted Experts{" "}
-            <Link 
-              href="/team"
-              className="mt-4 inline-block bg-[#2FA4F9] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#0E80C2] transition-colors duration-300"
-            >
+            <Link href="/team" className="mt-4 inline-block bg-[#2FA4F9] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#0E80C2] transition-colors duration-300">
               Team
             </Link>
           </h2>
         </div>
-        <div 
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 w-full lg:w-1/2"
-          data-aos="fade-left"
-        >
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 w-full lg:w-1/2" data-aos="fade-left">
           {teamMembers.map((member, index) => (
-            <div 
-              key={index} 
-              className="w-full aspect-square overflow-hidden rounded-lg"
-              data-aos="zoom-in"
-              data-aos-delay={index * 50}
-            >
+            <div key={index} className="w-full aspect-square overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay={index * 50}>
               <Image
                 src={`${member.picture.large}?compress=true&quality=50`}
                 alt={`Team Member ${index + 1}`}
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
-                width={150}
-                height={150}
+                width={100}
+                height={100}
                 loading="lazy"
-                quality={50}
+                quality={40}
+                sizes="(max-width: 768px) 80px, 100px"
               />
             </div>
           ))}
@@ -265,12 +213,7 @@ export default function HomePage() {
 
       {/* Testimonials Section */}
       <section className="bg-black py-16 px-4 sm:px-6 lg:px-24 text-white">
-        <h2 
-          className="text-center text-3xl sm:text-4xl font-bold mb-10"
-          data-aos="fade-up"
-        >
-          What Our Clients Say
-        </h2>
+        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10" data-aos="fade-up">What Our Clients Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {TESTIMONIALS.map((testimonial, index) => (
             <TestimonialCard
