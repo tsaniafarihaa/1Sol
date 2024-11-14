@@ -65,52 +65,67 @@ const TESTIMONIALS = [
   },
 ] as const;
 
-const HeroHalf = memo(({ title, image }: { title: string; image: string }) => (
-  <div
-    className="w-full md:w-1/2 h-[60vh] md:min-h-screen relative bg-cover bg-center group"
-    style={{ backgroundImage: `url(${image})` }}
-  >
-    <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300" />
-    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 mt-0">
-      <div className="transform -translate-y-1/4 md:translate-y-0">
-        <h2 
-          className="text-white text-base sm:text-lg font-bold mb-2" 
-          data-aos="fade-down"
-        >
-          WE ARE
-        </h2>
-        <h1 
-          className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-widest transition-all duration-300 group-hover:text-[#2Fa4F9] group-hover:scale-110"
-          data-aos="fade-up"
-        >
-          {title}
-        </h1>
+const HeroHalf = memo(function HeroHalf({ title, image }: { title: string; image: string }) {
+  return (
+    <div
+      className="w-full md:w-1/2 h-[60vh] md:min-h-screen relative bg-cover bg-center group"
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300" />
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 mt-0">
+        <div className="transform -translate-y-1/4 md:translate-y-0">
+          <h2 
+            className="text-white text-base sm:text-lg font-bold mb-2" 
+            data-aos="fade-down"
+          >
+            WE ARE
+          </h2>
+          <h1 
+            className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-widest transition-all duration-300 group-hover:text-[#2Fa4F9] group-hover:scale-110"
+            data-aos="fade-up"
+          >
+            {title}
+          </h1>
+        </div>
       </div>
     </div>
-  </div>
-));
+  );
+});
 
-const ServiceCard = memo(({ title, description, index }: { title: string; description: string; index: number }) => (
-  <div 
-    className="card bg-white/30 backdrop-blur-sm shadow-lg rounded-lg p-4 sm:p-6 hover:bg-[#2FA4F9] transition-all duration-300 hover:-translate-y-1"
-    data-aos="fade-up"
-    data-aos-delay={index * 100}
-  >
-    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-3">{title}</h3>
-    <p className="text-white text-sm sm:text-base">{description}</p>
-  </div>
-));
+const ServiceCard = memo(function ServiceCard({ title, description, index }: { 
+  title: string; 
+  description: string; 
+  index: number; 
+}) {
+  return (
+    <div 
+      className="card bg-white/30 backdrop-blur-sm shadow-lg rounded-lg p-4 sm:p-6 hover:bg-[#2FA4F9] transition-all duration-300 hover:-translate-y-1"
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-3">{title}</h3>
+      <p className="text-white text-sm sm:text-base">{description}</p>
+    </div>
+  );
+});
 
-const TestimonialCard = memo(({ text, author, role, index }: { text: string; author: string; role: string; index: number }) => (
-  <div 
-    className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg"
-    data-aos="fade-up"
-    data-aos-delay={index * 100}
-  >
-    <p className="text-base sm:text-lg italic">&quot;{text}&quot;</p>
-    <p className="mt-4 text-right font-semibold">- {author}, {role}</p>
-  </div>
-));
+const TestimonialCard = memo(function TestimonialCard({ text, author, role, index }: { 
+  text: string; 
+  author: string; 
+  role: string; 
+  index: number; 
+}) {
+  return (
+    <div 
+      className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg"
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <p className="text-base sm:text-lg italic">&quot;{text}&quot;</p>
+      <p className="mt-4 text-right font-semibold">- {author}, {role}</p>
+    </div>
+  );
+});
 
 export default function HomePage() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
