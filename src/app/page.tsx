@@ -37,51 +37,51 @@ const ANIMATION_CONFIG = {
 const SERVICES = [
   {
     id: 1,
-    title: "Digital Design",
-    description: "Creative and unique design solutions for branding and marketing.",
+    title: "Threat Detection & Monitoring",
+    description: "Real-time detection to catch threats before they impact your business.",
   },
   {
     id: 2,
-    title: "Digital Branding",
-    description: "Strategic branding and digital marketing solutions.",
+    title: "Vulnerability Assessments",
+    description: " Identifying and strengthening potential weaknesses in your system.",
   },
   {
     id: 3,
-    title: "Merchandise Production",
-    description: "High-quality merchandise for marketing and brand identity.",
+    title: "Incident Response",
+    description: "Fast, reliable response to any cybersecurity incident.",
   },
   {
     id: 4,
-    title: "Production House",
-    description: "Comprehensive video production services.",
+    title: "Security Training",
+    description: "Equip your team with the knowledge to prevent attacks. Explore each service to see how SecureGuard can be your line of defense in the digital world.",
   },
   {
     id: 5,
-    title: "Event Organizer",
-    description: "Memorable events tailored to your needs.",
+    title: "Cybersecurity Compliance & Risk Management",
+    description: "Guiding businesses through the complex landscape of cybersecurity compliance.",
   },
 ];
 
 const TESTIMONIALS = [
   {
     id: 1,
-    text: "FUGO Creative exceeded our expectations. Their attention to detail is top-notch!",
-    author: "John Doe",
-    role: "CEO of CompanyX",
+    text: "1Sol transformed our approach to cybersecurity. Their team expertise and proactive monitoring have been invaluable in safeguarding our sensitive data. We trust them completely to keep us secure.",
+    author: "Annalia",
+    role: "CEO of ENTe",
     delay: 0
   },
   {
     id: 2,
-    text: "An amazing team of professionals who truly care about our success.",
-    author: "Sarah Lee",
-    role: "Marketing Head",
+    text: "We faced constant threats that disrupted our operations, but since partnering with 1Sol, we’ve seen a complete turnaround. Their incident response team is fast, thorough, and always prepared.",
+    author: "Putri Ayu",
+    role: "CEO of Sukbir Peeps",
     delay: 0.2
   },
   {
     id: 3,
-    text: "Their team is skilled, and their support is exceptional.",
-    author: "Emily Clark",
-    role: "Project Manager",
+    text: "1Sol not only helped us meet compliance standards but went above and beyond to ensure our entire team understood cybersecurity best practices. They are a true partner in our digital security strategy",
+    author: "Aisha",
+    role: "CEO of Pondok Teruna",
     delay: 0.4
   }
 ];
@@ -163,11 +163,11 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col md:flex-row">
         <HeroHalf 
-          title="FUGO" 
+          title="ONE" 
           image="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" 
         />
         <HeroHalf 
-          title="CREATIVE" 
+          title="SOLUTION" 
           image="https://images.pexels.com/photos/2678468/pexels-photo-2678468.jpeg" 
         />
       </section>
@@ -183,9 +183,7 @@ export default function HomePage() {
             About Us
           </h2>
           <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-            Fugo Creative, established in 2016 in Bandung, provides a one-stop solution for various creative services.
-            In 2020, we became PT. Fugo Creative Group and have since expanded our sales channels, committed to
-            delivering quality and excellent service in the era of Industry 4.0.
+            With over a decade of experience in the cybersecurity industry, 1Sol was founded with a mission to protect companies of all sizes from emerging digital threats. Our expert team combines passion, skill, and a deep commitment to securing the future of digital business. At 1Sol, we are more than just a service provider—we are your trusted partner in cybersecurity.
           </p>
           <Link 
             href="/about"
@@ -240,7 +238,7 @@ export default function HomePage() {
       <section className="flex flex-col lg:flex-row items-center bg-black text-white py-16 lg:px-24 px-6">
         <div className="text-center lg:text-left lg:w-1/2 px-6 mb-6 lg:mb-0">
           <h2 className="text-5xl font-bold mb-4">
-            With a talented{" "}
+            Your Trusted Experts{" "}
             <Link 
               href="/team"
               className="mt-4 inline-block bg-[#2FA4F9] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#0E80C2] transition-colors duration-300"

@@ -45,12 +45,12 @@ export default function Navbar() {
             
             {/* Mobile Branding */}
             <div className="navbar-end lg:hidden">
-                <a className="text-white font-bold text-[19px] mr-6">FUGO CREATIVE</a>
+                <a className="text-white font-bold text-[19px] mr-6">1Sol</a>
             </div>
 
             {/* Desktop Layout */}
             <div className="navbar-start hidden lg:flex">
-                <a className="text-2xl font-bold text-white">FUGO CREATIVE</a>
+                <a className="text-2xl font-bold text-white">1Sol</a>
             </div>
             <div className="navbar-end hidden lg:flex lg:justify-end lg:pr-10">
                 <ul className="menu menu-horizontal space-x-6">

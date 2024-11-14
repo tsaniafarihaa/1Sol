@@ -114,54 +114,54 @@ export default function AboutPage() {
 
   const getTeamMemberDescription = (index: number) => {
     if (index === 0) {
-      return "With over 15 years of experience in creative industry, founded Fugo Creative with a vision to transform the digital landscape.";
+      return "With over 15 years of experience in the tech industry, he recognized the growing need for businesses to stay ahead of evolving cyber threats. In 2010, he founded 1Sol with the goal of providing companies with simple yet powerful cybersecurity solutions that would empower them to thrive in an increasingly digital world.";
     }
-    return "Leading our creative direction, brings 12 years of expertise in design and branding to deliver exceptional creative solutions.";
+    return "As Co-Founder and Chief Technology Officer of 1Sol, his technical prowess drives the company’s innovation. His ability to foresee emerging cyber threats and create effective, scalable solutions has been integral in the development of 1Sol’s services.";
   };
 
   const milestones = [
     {
       year: "2016",
-      title: "Founded in Bandung",
-      description: "Fugo Creative was established with a mission to provide innovative creative solutions."
+      title: "The Beginning: A Vision for Stronger Cybersecurity",
+      description: "1Sol was founded with a simple yet powerful mission: to provide businesses with robust cybersecurity solutions that are both effective and easy to implement. From day one, our goal was to make the digital world safer for all."
     },
     {
       year: "2018",
-      title: "Expanded Services",
-      description: "Added merchandise production and event organization to our service portfolio."
+      title: "Building Expertise: Innovating in the Face of Emerging Threats",
+      description: "Over the years, our team of experts has continuously evolved, staying ahead of emerging cyber threats with cutting-edge technologies and innovative solutions. We've grown into a trusted partner, known for our deep expertise and dedication to security."
     },
     {
       year: "2020",
-      title: "Company Evolution",
-      description: "Became PT. Fugo Creative Group and expanded our market reach."
+      title: "Expanding Reach: Serving Global Clients",
+      description: "As our reputation grew, so did our reach. We expanded our services internationally, working with clients across various industries—from healthcare to finance—helping them meet their unique cybersecurity challenges."
     },
     {
       year: "2023",
-      title: "Digital Innovation",
-      description: "Launched innovative digital solutions adapting to industry 4.0."
+      title: "Looking Ahead: A Future of Continuous Innovation",
+      description: "Our journey is far from over. At 1Sol, we are committed to continuous improvement, always adapting to new security needs. Our future is focused on harnessing the latest technologies to provide even more effective, tailored solutions to safeguard your digital assets."
     }
   ];
 
   const values = [
     {
       icon: Target,
-      title: "Innovation First",
-      description: "We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions."
+      title: "Integrity First",
+      description: "Our clients can trust us to protect their most valuable assets with transparency and honesty."
     },
     {
       icon: HandshakeIcon,
-      title: "Client Partnership",
-      description: "We build strong, lasting relationships with our clients, treating their success as our own."
+      title: "Innovation & Excellence",
+      description: "We foster a culture of continuous learning and innovation."
     },
     {
       icon: Sparkles,
-      title: "Creative Excellence",
-      description: "We maintain the highest standards of creativity and quality in everything we do."
+      title: "Collaboration & Teamwork",
+      description: "Our team works together seamlessly, combining diverse skills and perspectives."
     },
     {
       icon: Sprout,
-      title: "Continuous Growth",
-      description: "We foster a culture of learning and development, always striving to improve."
+      title: "Client-Centric Approach",
+      description: "We take the time to understand their unique challenges and goals."
     }
   ];
 
@@ -177,14 +177,14 @@ export default function AboutPage() {
             {...fadeInUp}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
           >
-            About <span className="text-[#2FA4F9]">Fugo Creative</span>
+            About <span className="text-[#2FA4F9]">1Sol</span>
           </motion.h1>
           <motion.p 
             {...fadeInUp}
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl max-w-2xl text-gray-300 px-4"
           >
-            Transforming ideas into impactful creative solutions since 2016
+            One Solution, Infinite Protection.
           </motion.p>
         </div>
       </div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12"
           >
-            Meet Our <span className="text-[#2FA4F9]">Leadership</span>
+            Visionaries Behind<span className="text-[#2FA4F9]"> 1Sol</span>
           </motion.h2>
           {isLoading ? (
             <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
@@ -266,36 +266,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Join Us Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#2FA4F9]/10">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6"
-          >
-            Join Our Creative Journey
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base"
-          >
-            We&apos;re always looking for talented individuals who share our passion for creativity and innovation.
-          </motion.p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-[#2FA4F9] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-medium 
-              hover:bg-[#2FA4F9]/90 transition-colors text-sm sm:text-base"
-          >
-            View Opportunities
-          </motion.button>
-        </div>
-      </section>
     </div>
   );
 }
