@@ -66,7 +66,7 @@ export default function Navbar() {
       <div className="bg-black/60 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Mobile Menu Button */}
+           
             <div className="lg:hidden">
               <button
                 type="button"
@@ -78,12 +78,12 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Logo */}
+          
             <div className="lg:hidden">
               <Logo />
             </div>
 
-            {/* Desktop Layout */}
+          
             <div className="hidden lg:flex lg:items-center lg:w-full">
               <Logo className="mr-8" />
               <div className="flex justify-end flex-1">
@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+      
         {isDropdownOpen && (
           <div className="lg:hidden">
             <div className="bg-white rounded-b-lg shadow-lg">
